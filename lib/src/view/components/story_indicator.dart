@@ -64,16 +64,18 @@ class StoryIndicator extends StatelessWidget {
           );
         } else {
           return Expanded(
-            child: AnimatedBuilder(
-              animation: animation!,
-              builder: (context, child) {
-                return LinearProgressIndicator(
-                  backgroundColor: style.backgroundColor,
-                  valueColor: AlwaysStoppedAnimation<Color>(style.valueColor),
-                  value: animation.value,
-                  minHeight: style.height,
-                );
-              },
+            child: SafeArea(
+              child: AnimatedBuilder(
+                animation: animation!,
+                builder: (context, child) {
+                  return LinearProgressIndicator(
+                    backgroundColor: style.backgroundColor,
+                    valueColor: AlwaysStoppedAnimation<Color>(style.valueColor),
+                    value: animation.value,
+                    minHeight: style.height,
+                  );
+                },
+              ),
             ),
           );
         }

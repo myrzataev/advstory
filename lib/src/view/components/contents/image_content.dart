@@ -82,22 +82,20 @@ class _ImageContentState extends StoryContentState<ImageContent> {
     }
 
     if (_imageProvider != null) {
-      return SafeArea(
-        child: Container(
-          constraints: const BoxConstraints.expand(),
-          child: Image(
-            image: _imageProvider!,
-            frameBuilder: (context, child, frame, wasSynchronouslyLoaded) {
-              return wasSynchronouslyLoaded
-                  ? child
-                  : AnimatedOpacity(
-                      opacity: frame != null ? 1 : 0,
-                      duration: const Duration(milliseconds: 300),
-                    );
-            },
-            fit: BoxFit.contain,
-            gaplessPlayback: true,
-          ),
+      return Container(
+        constraints: const BoxConstraints.expand(),
+        child: Image(
+          image: _imageProvider!,
+          frameBuilder: (context, child, frame, wasSynchronouslyLoaded) {
+            return wasSynchronouslyLoaded
+                ? child
+                : AnimatedOpacity(
+                    opacity: frame != null ? 1 : 0,
+                    duration: const Duration(milliseconds: 300),
+                  );
+          },
+          fit: BoxFit.contain,
+          gaplessPlayback: true,
         ),
       );
     }
