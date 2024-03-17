@@ -114,11 +114,20 @@ class ContentViewState extends State<ContentView> {
 
     return [
       if (header != null)
-        Positioned(
-          top: _provider!.style.indicatorStyle.height + 50,
-          left: 0,
-          child: header,
+        Positioned.fill(
+          child: Container(color: Colors.black),
         ),
+      // Positioned.fill(
+      // child: Image.network(
+      // story.imageUrl,
+      // fit: BoxFit.cover,
+      // ),
+      // ),
+      Positioned.fill(
+        // top: _provider!.style.indicatorStyle.height + 50,
+        // left: 0,
+        child: header!,
+      ),
       if (footer != null)
         Positioned(
           bottom: 0,
@@ -183,7 +192,6 @@ class ContentViewState extends State<ContentView> {
                         child: FadeTransition(
                           opacity: _provider!.controller.opacityController,
                           child: Stack(
-                            fit: StackFit.expand,
                             children: _getComponents(content),
                           ),
                         ),
