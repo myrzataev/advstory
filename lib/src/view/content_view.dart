@@ -115,7 +115,7 @@ class ContentViewState extends State<ContentView> {
     return [
       if (header != null)
         Positioned(
-          top: _provider!.style.indicatorStyle.height + 16,
+          top: _provider!.style.indicatorStyle.height + 50,
           left: 0,
           child: header,
         ),
