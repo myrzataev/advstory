@@ -114,8 +114,8 @@ class ContentViewState extends State<ContentView> {
 
     return [
       if (header != null)
-        Positioned(
-          top: _provider!.style.indicatorStyle.height + 50,
+        Positioned.fill(
+          top: _provider!.style.indicatorStyle.height,
           left: 0,
           child: header,
         ),
@@ -183,7 +183,6 @@ class ContentViewState extends State<ContentView> {
                         child: FadeTransition(
                           opacity: _provider!.controller.opacityController,
                           child: Stack(
-                            
                             children: _getComponents(content),
                           ),
                         ),
