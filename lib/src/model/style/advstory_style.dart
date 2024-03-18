@@ -9,7 +9,8 @@ import 'package:flutter/material.dart';
 class AdvStoryStyle {
   /// Creates styles to use in the [AdvStory].
   const AdvStoryStyle({
-    this.indicatorStyle = const IndicatorStyle(),
+    this.indicatorStyle = const IndicatorStyle(
+        backgroundColor: Colors.black, valueColor: Colors.red),
     this.trayListStyle = const TrayListStyle(),
     this.loadingStyle = const LoadingStyle(),
     this.loadingScreen,
