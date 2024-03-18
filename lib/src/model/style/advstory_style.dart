@@ -10,9 +10,9 @@ class AdvStoryStyle {
   /// Creates styles to use in the [AdvStory].
   const AdvStoryStyle({
     this.indicatorStyle = const IndicatorStyle(
-        backgroundColor: Colors.black, valueColor: Colors.red),
+         valueColor: Colors.black, backgroundColor: Colors.black),
     this.trayListStyle = const TrayListStyle(),
-    this.loadingStyle = const LoadingStyle(),
+    this.loadingStyle = const LoadingStyle(backgroundColor: Colors.black),
     this.loadingScreen,
     this.hideBars = true,
   });
