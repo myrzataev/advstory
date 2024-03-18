@@ -27,7 +27,7 @@ class _LoadingIndicatorState extends State<LoadingIndicator>
     if (_bg != null) return;
 
     final isLight = Theme.of(context).brightness == Brightness.light;
-    _bg = isLight ? const Color(0xFFFDFBF9) : const Color(0xFF1B1B1B);
+    _bg = isLight ? const Color(0x00000000) : const Color(0xFF1B1B1B);
   }
 
   @override
